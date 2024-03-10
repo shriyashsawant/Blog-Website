@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Website</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="public/boot.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<style>
+  body{
+      background-image: url(https://images.pexels.com/photos/6633920/pexels-photo-6633920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      
+  }
+
+  h1{
+     color: cornsilk;
+   background-color: brown;
+   font-size: 80px;
+   font: italic,bold;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  h1{
+   margin: 40px;
+   padding: 05px;
+   border: 30px;
+   border-radius: 10em 50px;
+   border-color: cornsilk;
+   border-style: double;
+   border-width: 8px;
+   box-shadow: 20px 5px 28px black;
+  }
+
+  h2{
+   font-size: 40px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: cornsilk;
+   width: 500px;
+   text-align: center;
+   height: 50px;
+   text-decoration: underline;
+   text-shadow: 100px;
+
+  } 
+
+  h3{
+   color: black;
+   background-image: linear-gradient(90deg,brown,white,cornsilk);
+   border-radius: 160px;
+   text-align: center;
+   text-transform: uppercase;
+   font: bold;
+  }
+
+
+  #mybox{
+      
+      height: 400px;
+      width: 300px;
+      background-color:darkred ;
+      animation-name: shriyash;
+      animation-iteration-count: infinite;
+      animation-duration: 5s;
+      border-radius: 200px;
+      
+
+  }
+
+  @keyframes shriyash{
+      from{background-color: chocolate;}
+      to{background-color: honeydew;}
+
+
+  }
+
+  .edit-btn,
+  .delete-btn {
+    border: 1px solid #28a745; /* Green border color */
+    background-color: transparent;
+    color: #28a745; /* Green text color */
+    padding: 5px 10px; /* Adjust padding as needed */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+
+  .edit-btn:hover,
+  .delete-btn:hover {
+    background-color: #28a745; /* Green background color on hover */
+    color: #fff; /* White text color on hover */
+  }
+
+</style>
+<body>
+
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg bg-body-secondry"></nav>
+            <div class="container-fluid">     
+                <a class="navbar-brand" href="#"><img src="https://i.ibb.co/ChN8pbW/logo-white.png" width="60px" height="60px" alt="logo-white"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link">Blog</a>
+                      </li>
+                      <li class="nav-item">
+                          <form class="d-flex" role="search" id="searchForm">
+                            <input class="form-control" type="search" placeholder="Search by Title" aria-label="Search" id="search">
+                            <button class="btn btn-outline-success me-2" type="submit">Search</button>      
+                          </form>
+                      </li>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+        <div id="b">
+            <div align="center">
+                <h1>My Blog</h1>
+                <h2  align="left">Welcome to Blogs</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div id="posts"></div>
+            <form id="postForm">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="content">Content:</label>
+                <textarea id="content" name="content" required></textarea>
+                <button type="submit">Add Post</button>
+            </form>
+        </div>
+        <script src="/scripts.js"></script>
+    </div>
+</body>
+</html>
